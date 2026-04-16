@@ -40,7 +40,7 @@ router.route("/change-password").post(verifyJwt, changeCurrentUserPassword);
 router.route("/current-user").get(verifyJwt,getCurrentUser);
 router.route("/update-account").patch(verifyJwt, updateCurrentUser);
 router.route("/update-avatar").patch(verifyJwt, upload.single("avatar"), updateUserAvatar);
-router.route("/update-cover-image").patch(verifyJwt, upload.single("/coverImage"), updateUserCoverImage);
+router.route("/update-cover-image").patch(verifyJwt, upload.single("coverImage"), updateUserCoverImage);
 router.route("/channel-profile/:username").get(verifyJwt,getUserChannelProfile);
 router.route("/watch-history").get(verifyJwt, getWatchHistory);
 
